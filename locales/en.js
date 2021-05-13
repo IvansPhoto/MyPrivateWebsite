@@ -1,3 +1,3 @@
 export default {
-	Title: 'Title',
-}
+	Title: 'Title'
+};

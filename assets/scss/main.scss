@@ -2,13 +2,11 @@
 @import "fonts";
 @import "transitions";
 @import "headers";
-/* Scroll START*/
 
 html {
 	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
-	font-family: Geometria, sans-serif;
 }
 
 body {
@@ -17,79 +15,6 @@ body {
 	background-color: var(--colorBackground);
 }
 
-main {
-	justify-self: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.sectionClass {
-	display: grid;
-	grid-template-columns: var(--sectionHeaderWidth) var(--contentWidth);
-	align-items: flex-start;
-	margin: 5rem 0;
-	gap: 2rem;
-
-	.sectionHeader {
-		position: sticky;
-		top: 1.5rem;
-
-		&:after {
-			position: absolute;
-			content: '';
-			top: -0.5rem;
-			left: -1rem;
-			width: 5rem;
-			height: 0.5rem;
-			border-radius: 0 0.5rem 0 0.5rem;
-			transform: skew(10deg);
-			background-color: var(--colorCyanC);
-			z-index: -1;
-		}
-	}
-
-	.sectionContent {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-start;
-		img {
-			align-self: center;
-		}
-	}
-}
-
-//@media (min-width: 1001px) and (max-width: 1441px) {
-//	.sectionClass {
-//		grid-template-columns: 20vw var(--contentWidth);
-//	}
-//}
-
 @media (max-width: 1000px) {
-	.sectionClass {
-		grid-template-columns: 1fr;
-		margin: 3rem 0 1rem 0;
 
-		.sectionHeader {
-			top: 0;
-			padding: 1rem 0 0.5rem 0;
-			border-bottom: 0.1rem solid var(--colorCyanC);
-			background-color: var(--colorBackground);
-
-			&:after {
-				position: unset;
-				content: unset;
-				top: unset;
-				left: unset;
-				width: unset;
-				height: unset;
-				border-radius: unset;
-				transform: unset;
-				background-color: unset;
-				z-index: unset;
-			}
-		}
-	}
 }
